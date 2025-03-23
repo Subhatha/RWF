@@ -15,6 +15,8 @@ import ProgressScreen from './components/ProgressScreen';
 import ScheduleScreen from './components/ScheduleScreen';
 import EquipmentScreen from './components/EquipmentScreen';
 import ProfilePage from './components/ProfilePage';
+import WorkoutDataLogScreen from './components/WorkoutDataLogScreen'; 
+
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -25,7 +27,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Force sign out when app reloads or restarts
+    
     firebase.auth().signOut();
 
     const unsubscribe = firebase.auth().onAuthStateChanged(async (user) => {
@@ -43,11 +45,11 @@ export default function App() {
           setProfileCompleted(false);
         }
       }
-      setUser(user);  // This ensures the user remains logged in
+      setUser(user);  
       setIsLoading(false);
     });
 
-    return unsubscribe; // Clean up the listener
+    return unsubscribe; 
   }, []);
 
   const AuthStack = () => (
@@ -56,6 +58,8 @@ export default function App() {
       <Stack.Screen name="Signup" component={SignupScreen} />
       <Stack.Screen name="ProfileSetup" component={ProfileSetupScreen} />
       <Stack.Screen name="Profile" component={ProfilePage} />
+      <Stack.Screen name="WorkoutScreen" component={WorkoutScreen} />
+      <Stack.Screen name="WorkoutDataLog" component={WorkoutDataLogScreen} />
     </Stack.Navigator>
   );
 
@@ -91,12 +95,13 @@ export default function App() {
       }}
     >
       <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Workout" component={WorkoutScreen} />
-      <Tab.Screen name="Progress" component={ProgressScreen} />
-      <Tab.Screen name="Schedule" component={ScheduleScreen} />
-      <Tab.Screen name="Equipment" component={EquipmentScreen} />
-      <Tab.Screen name="Profile" component={ProfilePage} />
-    </Tab.Navigator>
+    <Tab.Screen name="Workout" component={WorkoutScreen} />
+    <Tab.Screen name="Progress" component={ProgressScreen} />
+    <Tab.Screen name="Schedule" component={ScheduleScreen} />
+    <Tab.Screen name="Equipment" component={EquipmentScreen} />
+    <Tab.Screen name="Profile" component={ProfilePage} />
+  
+  </Tab.Navigator>
   );
 
   if (isLoading) {
