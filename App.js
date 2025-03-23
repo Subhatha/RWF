@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
-import { firebase } from './firebase/firebaseConfig';  // Import firebase instance
-import { Text } from 'react-native';  // Correct Text import
-import { FontAwesome5 } from '@expo/vector-icons';  // Import FontAwesome5 for icons
+import { firebase } from './firebase/firebaseConfig'; 
+import { Text } from 'react-native';  
+import { FontAwesome5 } from '@expo/vector-icons';  
 
 import LoginScreen from './components/LoginScreen';
 import SignupScreen from './components/SignupScreen';
@@ -14,6 +14,7 @@ import WorkoutScreen from './components/WorkoutScreen';
 import ProgressScreen from './components/ProgressScreen';
 import ScheduleScreen from './components/ScheduleScreen';
 import EquipmentScreen from './components/EquipmentScreen';
+import ProfilePage from './components/ProfilePage';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -54,6 +55,7 @@ export default function App() {
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Signup" component={SignupScreen} />
       <Stack.Screen name="ProfileSetup" component={ProfileSetupScreen} />
+      <Stack.Screen name="Profile" component={ProfilePage} />
     </Stack.Navigator>
   );
 
@@ -73,6 +75,8 @@ export default function App() {
             iconName = 'calendar-alt';
           } else if (route.name === 'Equipment') {
             iconName = 'weight';
+          } else if (route.name === 'Profile') {
+            iconName = 'user';
           }
 
           return <FontAwesome5 name={iconName} size={size} color={color} />;
@@ -81,6 +85,9 @@ export default function App() {
       tabBarOptions={{
         activeTintColor: '#007FFF',
         inactiveTintColor: '#555',
+        style: {
+          backgroundColor: '#1e1e1e', // Set background color of the tab bar
+        },
       }}
     >
       <Tab.Screen name="Home" component={HomeScreen} />
@@ -88,6 +95,7 @@ export default function App() {
       <Tab.Screen name="Progress" component={ProgressScreen} />
       <Tab.Screen name="Schedule" component={ScheduleScreen} />
       <Tab.Screen name="Equipment" component={EquipmentScreen} />
+      <Tab.Screen name="Profile" component={ProfilePage} />
     </Tab.Navigator>
   );
 
