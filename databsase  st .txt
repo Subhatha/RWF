@@ -1,0 +1,36 @@
+users (Collection)
+  ├── {userId} (Document)
+       ├── name: string
+       ├── email: string
+       ├── age: number
+       ├── height: number
+       ├── weight: number
+       ├── bodyType: string ("slim", "medium", "fat")
+       ├── gender: string ("male", "female")
+       ├── createdAt: timestamp
+       ├── workouts (Subcollection)
+            ├── {workoutId} (Document)
+                 ├── workoutName: string
+                 ├── date: timestamp
+                 ├── duration: number (in minutes)
+                 ├── caloriesBurned: number
+                 ├── exercises (Subcollection)
+                      ├── {exerciseId} (Document)
+                           ├── exerciseName: string
+                           ├── sets: number
+                           ├── reps: number
+                           ├── restTime: number (seconds)
+                           ├── completed: boolean
+                           
+workouts (Collection)
+  ├── {workoutId} (Document)
+       ├── name: string
+       ├── description: string
+       ├── category: string ("strength", "cardio", etc.)
+       ├── exercises (Subcollection)
+            ├── {exerciseId} (Document)
+                 ├── name: string
+                 ├── sets: number
+                 ├── reps: number
+                 ├── restTime: number (seconds)
+
