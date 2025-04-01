@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
-import { firebase } from '../firebase/firebaseConfig'; 
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, ScrollView } from 'react-native';
+import { firebase } from '../firebase/firebaseConfig';
 import { Ionicons } from '@expo/vector-icons';
 
 const ProfilePage = ({ navigation }) => {
@@ -12,14 +12,12 @@ const ProfilePage = ({ navigation }) => {
   const [newPassword, setNewPassword] = useState('');
   const [loading, setLoading] = useState(false);
 
-  
   useEffect(() => {
     const fetchUserDetails = async () => {
       const user = firebase.auth().currentUser;
       if (user) {
         setEmail(user.email);
 
-        // Fetch additional profile data from Firestore
         const userDoc = await firebase.firestore().collection('users').doc(user.uid).get();
         if (userDoc.exists) {
           const userData = userDoc.data();
@@ -33,23 +31,20 @@ const ProfilePage = ({ navigation }) => {
     fetchUserDetails();
   }, []);
 
-  // Handle profile update
   const handleUpdateProfile = async () => {
     setLoading(true);
     const user = firebase.auth().currentUser;
 
     if (user) {
       try {
-        // Update profile in Firebase Authentication
         await user.updateProfile({
           displayName: username,
         });
 
-        // Update profile in Firestore
         await firebase.firestore().collection('users').doc(user.uid).update({
-          username: username,
-          height: height,
-          weight: weight,
+          username,
+          height,
+          weight,
         });
 
         Alert.alert('Success', 'Profile updated successfully!');
@@ -61,7 +56,6 @@ const ProfilePage = ({ navigation }) => {
     setLoading(false);
   };
 
-  // Handle password change
   const handleChangePassword = async () => {
     if (!newPassword) {
       Alert.alert('Error', 'New password cannot be empty.');
@@ -83,106 +77,103 @@ const ProfilePage = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Profile</Text>
+    <ScrollView contentContainerStyle={styles.scrollContainer}>
+      <View style={styles.container}>
+        <Text style={styles.title}>Profile</Text>
 
-      {/* Username */}
-      <View style={styles.inputContainer}>
-        <Ionicons name="person" size={20} color="#bbb" style={styles.icon} />
-        <TextInput
-          style={styles.input}
-          placeholder="Username"
-          value={username}
-          onChangeText={setUsername}
-          placeholderTextColor="#888"
-        />
+        <View style={styles.inputContainer}>
+          <Ionicons name="person" size={20} color="#bbb" style={styles.icon} />
+          <TextInput
+            style={styles.input}
+            placeholder="Username"
+            value={username}
+            onChangeText={setUsername}
+            placeholderTextColor="#888"
+          />
+        </View>
+
+        <View style={styles.inputContainer}>
+          <Ionicons name="mail" size={20} color="#bbb" style={styles.icon} />
+          <TextInput
+            style={styles.input}
+            placeholder="Email"
+            value={email}
+            editable={false}
+            placeholderTextColor="#888"
+          />
+        </View>
+
+        <View style={styles.inputContainer}>
+          <Ionicons name="ribbon" size={20} color="#bbb" style={styles.icon} />
+          <TextInput
+            style={styles.input}
+            placeholder="Height (cm)"
+            value={height}
+            onChangeText={setHeight}
+            keyboardType="numeric"
+            placeholderTextColor="#888"
+          />
+        </View>
+
+        <View style={styles.inputContainer}>
+          <Ionicons name="scale" size={20} color="#bbb" style={styles.icon} />
+          <TextInput
+            style={styles.input}
+            placeholder="Weight (kg)"
+            value={weight}
+            onChangeText={setWeight}
+            keyboardType="numeric"
+            placeholderTextColor="#888"
+          />
+        </View>
+
+        <TouchableOpacity style={styles.button} onPress={handleUpdateProfile} disabled={loading}>
+          <Text style={styles.buttonText}>{loading ? 'Updating...' : 'Update Profile'}</Text>
+        </TouchableOpacity>
+
+        <Text style={styles.changePasswordTitle}>Change Password</Text>
+
+        <View style={styles.inputContainer}>
+          <Ionicons name="lock-closed" size={20} color="#bbb" style={styles.icon} />
+          <TextInput
+            style={styles.input}
+            placeholder="Current Password"
+            secureTextEntry
+            value={password}
+            onChangeText={setPassword}
+            placeholderTextColor="#888"
+          />
+        </View>
+
+        <View style={styles.inputContainer}>
+          <Ionicons name="lock-closed" size={20} color="#bbb" style={styles.icon} />
+          <TextInput
+            style={styles.input}
+            placeholder="New Password"
+            secureTextEntry
+            value={newPassword}
+            onChangeText={setNewPassword}
+            placeholderTextColor="#888"
+          />
+        </View>
+
+        <TouchableOpacity style={styles.button} onPress={handleChangePassword} disabled={loading}>
+          <Text style={styles.buttonText}>{loading ? 'Changing...' : 'Change Password'}</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.logoutButton} onPress={() => firebase.auth().signOut()}>
+          <Text style={styles.logoutText}>Logout</Text>
+        </TouchableOpacity>
       </View>
-
-      {/* Email */}
-      <View style={styles.inputContainer}>
-        <Ionicons name="mail" size={20} color="#bbb" style={styles.icon} />
-        <TextInput
-          style={styles.input}
-          placeholder="Email"
-          value={email}
-          editable={false}  // Disables email editing
-          placeholderTextColor="#888"
-        />
-      </View>
-
-      {/* Height */}
-      <View style={styles.inputContainer}>
-        <Ionicons name="ribbon" size={20} color="#bbb" style={styles.icon} />
-        <TextInput
-          style={styles.input}
-          placeholder="Height (cm)"
-          value={height}
-          onChangeText={setHeight}
-          keyboardType="numeric"
-          placeholderTextColor="#888"
-        />
-      </View>
-
-      {/* Weight */}
-      <View style={styles.inputContainer}>
-        <Ionicons name="scale" size={20} color="#bbb" style={styles.icon} />
-        <TextInput
-          style={styles.input}
-          placeholder="Weight (kg)"
-          value={weight}
-          onChangeText={setWeight}
-          keyboardType="numeric"
-          placeholderTextColor="#888"
-        />
-      </View>
-
-      {/* Update Profile Button */}
-      <TouchableOpacity style={styles.button} onPress={handleUpdateProfile} disabled={loading}>
-        <Text style={styles.buttonText}>{loading ? 'Updating...' : 'Update Profile'}</Text>
-      </TouchableOpacity>
-
-      <Text style={styles.changePasswordTitle}>Change Password</Text>
-
-      {/* Old Password */}
-      <View style={styles.inputContainer}>
-        <Ionicons name="lock-closed" size={20} color="#bbb" style={styles.icon} />
-        <TextInput
-          style={styles.input}
-          placeholder="Current Password"
-          secureTextEntry={true}
-          value={password}
-          onChangeText={setPassword}
-          placeholderTextColor="#888"
-        />
-      </View>
-
-      {/* New Password */}
-      <View style={styles.inputContainer}>
-        <Ionicons name="lock-closed" size={20} color="#bbb" style={styles.icon} />
-        <TextInput
-          style={styles.input}
-          placeholder="New Password"
-          secureTextEntry={true}
-          value={newPassword}
-          onChangeText={setNewPassword}
-          placeholderTextColor="#888"
-        />
-      </View>
-
-      {/* Change Password Button */}
-      <TouchableOpacity style={styles.button} onPress={handleChangePassword} disabled={loading}>
-        <Text style={styles.buttonText}>{loading ? 'Changing...' : 'Change Password'}</Text>
-      </TouchableOpacity>
-
-      {/* Logout Button */}
-      <TouchableOpacity style={styles.logoutButton} onPress={() => firebase.auth().signOut()}>
-        <Text style={styles.logoutText}>Logout</Text>
-      </TouchableOpacity>
-    </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
+  scrollContainer: {
+    flexGrow: 1,
+    paddingBottom: 20,
+  },
   container: {
     flex: 1,
     padding: 20,
@@ -232,7 +223,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   logoutButton: {
-    backgroundColor: '#f44336',  // Red color for logout
+    backgroundColor: '#f44336',
     padding: 15,
     borderRadius: 10,
     alignItems: 'center',
