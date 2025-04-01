@@ -3,6 +3,7 @@ import { Text, View, TouchableOpacity, StyleSheet, Modal, ScrollView } from 'rea
 import { FontAwesome5 } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 
+
 function HomeScreen({ navigation }) {
   const [modalVisible, setModalVisible] = React.useState(false);
 
