@@ -9,7 +9,7 @@ const ProfileSetupScreen = ({ navigation }) => {
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
   const [bodyType, setBodyType] = useState('slim'); 
-  const [gender, setGender] = useState('male');  // New state for gender
+  const [gender, setGender] = useState('male');  
 
   const handleSaveProfile = async () => {
     if (!username || !age || !height || !weight || !bodyType || !gender) {
