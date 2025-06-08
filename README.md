@@ -78,7 +78,6 @@ RWF/
 │   └── WorkoutScreen.js
 ├── firebase/
 │   └── firebaseConfig.js
-├── theme.js
 ├── Data/
     └── workoutData.json
 ├── User Manual
