@@ -1,117 +1,150 @@
-# Sample Snack app
+# Relax With Flex (RWF) 🧘‍♂️💪
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
+**Relax With Flex** is a mobile fitness app built with **React Native**, **Snack Expo Dev**, and **Firebase**. It helps users personalize their workout plans based on their body type and track their fitness progress. The app also offers gym-related products, workout scheduling, and in-app purchases.
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo cli](https://docs.expo.dev/get-started/installation/#expo-cli)).
+---
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
+## 🚀 Prerequisites
 
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.dev/c/expo-dev-tools/61) or [Discord](https://chat.expo.dev/).
+Before you begin, ensure you have the following tools installed:
 
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
+- [Node.js](https://nodejs.org/) (version 16 or higher)
+- npm (comes with Node.js)
+- [Expo CLI](https://docs.expo.dev/get-started/installation/)
+- Git
+- Firebase account
+- [Expo Go](https://expo.dev/client) app on your mobile device
 
+---
 
+## 📦 Installation
 
-Requirements List
-1. Functional Requirements
-1.1 User Authentication & Profile Management
-Users must be able to sign up using email and password.
+### 1. Clone the repository
 
-Users must be able to log in and log out securely.
+```bash
+git clone https://github.com/Subhatha/RWF.git
+cd RWF
+```
 
-Users must complete their profile after signing up (name, age, height, weight, body structure, gender).
+### 2. Run on Snack Expo (Recommended for Development)
 
-The app must fetch user profile data from Firebase Firestore upon login.
+- Go to [https://snack.expo.dev](https://snack.expo.dev)
+- Upload or paste your code
+- Scan the QR code using **Expo Go** to run the app on your phone instantly
 
-Users with incomplete profiles must be redirected to the profile creation screen.
+### 3. Or Install Dependencies Locally
 
-1.2 Personalized Workout Plan Generation
-The app must generate workout plans based on the user's body type, height, weight, and gender.
+```bash
+npx expo install
+```
 
-Workout plans should be categorized as:
+---
 
-Slim: Muscle gain and endurance workouts.
+## 📱 Running the App
 
-Medium: Balanced fitness and HIIT.
+Start the development server:
 
-Fat: Fat burning and core strength workouts.
+```bash
+npx expo start
+```
 
-Additional workout recommendations based on:
+Then:
 
-Height (short, medium, tall).
+- Press **a** for Android emulator  
+- Press **i** for iOS simulator  
+- Press **w** for web browser  
+- Or scan the QR code with **Expo Go**
 
-Weight (underweight, normal, overweight).
+---
 
-Gender (upper-body vs. lower-body focus).
+## 🗂 Project Structure
 
-1.3 Workout Tracking & Logging
-Users must be able to select a workout and start it.
+```
+RWF/
+├── assets/
+├── components/              # Reusable UI elements
+├── screens/                 # App screens
+│   ├── LoginScreen.js
+│   ├── SignupScreen.js
+│   ├── ProfileScreen.js
+│   ├── WorkoutScreen.js
+│   ├── ShopScreen.js
+│   └── ScheduleScreen.js
+├── services/
+│   └── firebase.js          # Firebase config & logic
+├── utils/
+│   └── workoutGenerator.js  # Workout logic from Excel data
+├── App.js
+```
 
-Workout sessions should be logged and stored in Firebase.
+---
 
-Users must be able to track workout progress over time.
+## 🔑 Features
 
-1.4 UI & Navigation
-The app must use React Navigation for smooth screen transitions.
+- 🔐 **User Authentication** (Firebase)
+- 👤 **Profile Creation & Management**
+- 🧠 **Customized Workout Plans**
+  - Based on gender, age, height, weight, body type
+  - Uses data from Excel-based plans
+- 📅 **Workout Scheduling** *(in progress)*
+- 🏋️‍♀️ **Track Workouts** *(upcoming)*
+- 🛒 **In-App Shop** (gym gear, protein)
+- 🏬 **Gym Order Requests**
+- 📷 **Image Uploads (profile pics)**
+- ☁️ **Firebase Integration**
+- 📱 **Runs on Expo & Snack Dev**
 
-Screens must include:
+---
 
-Login Screen (with a sign-up redirect).
+## 🔥 Firebase
 
-Signup Screen (with Firebase authentication).
+**Firebase SDK Version**: `8.10`
 
-Profile Creation Screen (for entering user details).
+Used services:
 
-Home Screen (showing personalized workout plans).
+- Firebase Authentication
+- Firestore Database
+- Firebase Storage
 
-Workout Data Log Screen (to track workout sessions).
+---
 
-1.5 Dark & Light Mode Support
-The app must support both light and dark themes.
+## 🛠 Development Tips
 
-Users should be able to switch between themes.
+- Edit components in `screens/` and `components/`
+- Update logic in `utils/workoutGenerator.js`
+- Ensure you're connected to the correct Firebase project
 
-2. Non-Functional Requirements
-2.1 Performance & Scalability
-The app should load workout plans within 3 seconds.
+---
 
-Firebase Firestore should be used for efficient data retrieval.
+## 🧯 Troubleshooting
 
-2.2 Security & Data Protection
-User authentication should be handled using Firebase Authentication.
+### Clear npm cache
 
-User data must be securely stored in Firestore.
+```bash
+npm cache clean --force
+```
 
-No sensitive information should be stored on the client-side.
+### Reinstall dependencies
 
-2.3 Compatibility
-The app must work on both Android and iOS.
+```bash
+rm -rf node_modules
+npx expo install
+```
 
-Must be optimized for mobile devices with React Native & Expo.
+### Clear Expo cache
 
-2.4 Usability & UX
-The UI should be clean, intuitive, and responsive.
+```bash
+expo start -c
+```
 
-Users should get real-time feedback (e.g., loading indicators).
+---
 
-3. Software & Technology Stack
-3.1 Frontend Technologies
-React Native → For building the mobile app UI.
+## 📜 License
 
-React Hooks (useState, useEffect) → For state management.
+This project is licensed under the **MIT License** – see the `LICENSE` file for details.
 
-React Navigation → For screen navigation.
+---
 
-Expo (Optional) → If using Snack Expo for development.
+## 🌐 Repository
 
-3.2 Backend & Database
-Firebase Authentication → For user login/signup.
-
-Firebase Firestore → For storing user data and workout logs.
-
-3.3 Development Tools
-Snack Expo → For development without local setup.
-
-VS Code (Recommended) → For coding.
-
-Git & GitHub → For version control (if needed).
+👉 [GitHub – Relax With Flex](https://github.com/Subhatha/RWF)
