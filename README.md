@@ -62,8 +62,8 @@ Then:
 ```
 RWF/
 ├── assets/
-├── components/              # Reusable UI elements
-├── screens/                 # App screens
+├── components/
+├── screens/
 │   ├── LoginScreen.js
 │   ├── SignupScreen.js
 │   ├── ProfileScreen.js
@@ -71,9 +71,9 @@ RWF/
 │   ├── ShopScreen.js
 │   └── ScheduleScreen.js
 ├── services/
-│   └── firebase.js          # Firebase config & logic
+│   └── firebase.js 
 ├── utils/
-│   └── workoutGenerator.js  # Workout logic from Excel data
+│   └── workoutGenerator.js
 ├── App.js
 ```
 
