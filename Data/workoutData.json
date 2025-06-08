@@ -1,0 +1,158 @@
+[
+  {
+    "Age": "18-25",
+    "Height": "150-180",
+    "Weight": "40-65",
+    "BodyType": "slim",
+    "WorkoutPlan": [
+      { "Exercise": "Push-Ups", "Category": "Chest", "Reps": "3 sets of 15 reps" },
+      { "Exercise": "Pull-Ups", "Category": "Back", "Reps": "3 sets of 10 reps" },
+      { "Exercise": "Squats", "Category": "Legs", "Reps": "4 sets of 12 reps" },
+      { "Exercise": "Plank", "Category": "Core", "Reps": "3 sets of 60 seconds" },
+      { "Exercise": "Jump Rope", "Category": "Cardio", "Reps": "5 minutes" }
+    ]
+  },
+  {
+    "Age": "18-25",
+    "Height": "150-180",
+    "Weight": "60-80",
+    "BodyType": "medium",
+    "WorkoutPlan": [
+      { "Exercise": "Push-Ups", "Category": "Chest", "Reps": "3 sets of 15 reps" },
+      { "Exercise": "Pull-Ups", "Category": "Back", "Reps": "3 sets of 12 reps" },
+      { "Exercise": "Lunges", "Category": "Legs", "Reps": "3 sets of 15 reps" },
+      { "Exercise": "Mountain Climbers", "Category": "Core", "Reps": "3 sets of 20 reps" },
+      { "Exercise": "Jump Rope", "Category": "Cardio", "Reps": "5 minutes" }
+    ]
+  },
+  {
+    "Age": "18-25",
+    "Height": "150-180",
+    "Weight": "80-100",
+    "BodyType": "fat",
+    "WorkoutPlan": [
+      { "Exercise": "Walking", "Category": "Cardio", "Reps": "30 minutes" },
+      { "Exercise": "Bodyweight Squats", "Category": "Legs", "Reps": "3 sets of 12 reps" },
+      { "Exercise": "Modified Push-Ups", "Category": "Chest", "Reps": "3 sets of 10 reps" },
+      { "Exercise": "Plank", "Category": "Core", "Reps": "3 sets of 20 seconds" },
+      { "Exercise": "Arm Circles", "Category": "Mobility", "Reps": "2 sets of 20 reps" }
+    ]
+  },
+  {
+    "Age": "26-35",
+    "Height": "150-180",
+    "Weight": "55-75",
+    "BodyType": "slim",
+    "WorkoutPlan": [
+      { "Exercise": "Burpees", "Category": "Full Body", "Reps": "3 sets of 15 reps" },
+      { "Exercise": "Wall Sit", "Category": "Legs", "Reps": "3 sets of 45 seconds" },
+      { "Exercise": "Russian Twists", "Category": "Core", "Reps": "3 sets of 20 reps per side" },
+      { "Exercise": "Skipping Rope", "Category": "Cardio", "Reps": "5 minutes" },
+      { "Exercise": "Chin-Ups", "Category": "Biceps", "Reps": "3 sets of 8 reps" }
+    ]
+  },
+  {
+    "Age": "26-35",
+    "Height": "150-190",
+    "Weight": "75-90",
+    "BodyType": "medium",
+    "WorkoutPlan": [
+      { "Exercise": "Burpees", "Category": "Full Body", "Reps": "3 sets of 15 reps" },
+      { "Exercise": "Wall Sit", "Category": "Legs", "Reps": "3 sets of 45 seconds" },
+      { "Exercise": "Russian Twists", "Category": "Core", "Reps": "3 sets of 20 reps per side" },
+      { "Exercise": "Skipping Rope", "Category": "Cardio", "Reps": "5 minutes" },
+      { "Exercise": "Push-Ups", "Category": "Chest", "Reps": "3 sets of 15 reps" }
+    ]
+  },
+  {
+    "Age": "26-35",
+    "Height": "150-190",
+    "Weight": "90-130",
+    "BodyType": "fat",
+    "WorkoutPlan": [
+      { "Exercise": "Walking", "Category": "Cardio", "Reps": "30 minutes" },
+      { "Exercise": "Modified Push-Ups", "Category": "Chest", "Reps": "3 sets of 12 reps" },
+      { "Exercise": "Bodyweight Squats", "Category": "Legs", "Reps": "3 sets of 12 reps" },
+      { "Exercise": "Plank", "Category": "Core", "Reps": "3 sets of 20 seconds" },
+      { "Exercise": "Marching in Place", "Category": "Cardio", "Reps": "5 minutes" }
+    ]
+  },
+  {
+    "Age": "36-45",
+    "Height": "150-190",
+    "Weight": "65-85",
+    "BodyType": "slim",
+    "WorkoutPlan": [
+      { "Exercise": "Walking", "Category": "Cardio", "Reps": "30 minutes" },
+      { "Exercise": "Bodyweight Squats", "Category": "Legs", "Reps": "3 sets of 12 reps" },
+      { "Exercise": "Standing Calf Raises", "Category": "Legs", "Reps": "3 sets of 15 reps" },
+      { "Exercise": "Plank", "Category": "Core", "Reps": "3 sets of 30 seconds" },
+      { "Exercise": "Arm Circles", "Category": "Mobility", "Reps": "2 sets of 20 reps" }
+    ]
+  },
+  {
+    "Age": "36-45",
+    "Height": "150-190",
+    "Weight": "85-100",
+    "BodyType": "medium",
+    "WorkoutPlan": [
+      { "Exercise": "Jump Rope", "Category": "Cardio", "Reps": "3 sets of 2 minutes" },
+      { "Exercise": "Modified Push-Ups", "Category": "Chest", "Reps": "3 sets of 12 reps" },
+      { "Exercise": "Seated Leg Raises", "Category": "Core", "Reps": "3 sets of 15 reps" },
+      { "Exercise": "Side Planks", "Category": "Core", "Reps": "3 sets of 20 seconds per side" },
+      { "Exercise": "Glute Bridges", "Category": "Legs", "Reps": "3 sets of 12 reps" }
+    ]
+  },
+  {
+    "Age": "36-45",
+    "Height": "150-190",
+    "Weight": "100-125",
+    "BodyType": "fat",
+    "WorkoutPlan": [
+      { "Exercise": "Walking", "Category": "Cardio", "Reps": "30 minutes" },
+      { "Exercise": "Bodyweight Squats", "Category": "Legs", "Reps": "3 sets of 12 reps" },
+      { "Exercise": "Modified Push-Ups", "Category": "Chest", "Reps": "3 sets of 12 reps" },
+      { "Exercise": "Plank", "Category": "Core", "Reps": "3 sets of 30 seconds" },
+      { "Exercise": "Arm Circles", "Category": "Mobility", "Reps": "2 sets of 20 reps" }
+    ]
+  },
+  {
+    "Age": "46-55",
+    "Height": "150-190",
+    "Weight": "60-80",
+    "BodyType": "slim",
+    "WorkoutPlan": [
+      { "Exercise": "Walking", "Category": "Cardio", "Reps": "30 minutes" },
+      { "Exercise": "Bodyweight Squats", "Category": "Legs", "Reps": "3 sets of 12 reps" },
+      { "Exercise": "Standing Calf Raises", "Category": "Legs", "Reps": "3 sets of 15 reps" },
+      { "Exercise": "Plank", "Category": "Core", "Reps": "3 sets of 30 seconds" },
+      { "Exercise": "Arm Circles", "Category": "Mobility", "Reps": "2 sets of 20 reps" }
+    ]
+  },
+  {
+    "Age": "46-55",
+    "Height": "150-190",
+    "Weight": "80-100",
+    "BodyType": "medium",
+    "WorkoutPlan": [
+      { "Exercise": "Jump Rope", "Category": "Cardio", "Reps": "3 sets of 2 minutes" },
+      { "Exercise": "Modified Push-Ups", "Category": "Chest", "Reps": "3 sets of 12 reps" },
+      { "Exercise": "Seated Leg Raises", "Category": "Core", "Reps": "3 sets of 15 reps" },
+      { "Exercise": "Side Planks", "Category": "Core", "Reps": "3 sets of 20 seconds per side" },
+      { "Exercise": "Glute Bridges", "Category": "Legs", "Reps": "3 sets of 12 reps" }
+    ]
+  },
+  {
+    "Age": "46-55",
+    "Height": "150-190",
+    "Weight": "100-125",
+    "BodyType": "fat",
+    "WorkoutPlan": [
+      { "Exercise": "Walking", "Category": "Cardio", "Reps": "30 minutes" },
+      { "Exercise": "Bodyweight Squats", "Category": "Legs", "Reps": "3 sets of 12 reps" },
+      { "Exercise": "Modified Push-Ups", "Category": "Chest", "Reps": "3 sets of 12 reps" },
+      { "Exercise": "Plank", "Category": "Core", "Reps": "3 sets of 30 seconds" },
+      { "Exercise": "Arm Circles", "Category": "Mobility", "Reps": "2 sets of 20 reps" }
+    ]
+  }
+]
