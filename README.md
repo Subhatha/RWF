@@ -40,6 +40,45 @@ npx expo install
 
 ---
 
+
+## 📦 Key Dependencies
+
+The app uses the following major libraries:
+
+```json
+{
+  "axios": "^0.27.2",
+  "firebase": "8.10.0",
+  "firebase/app": "8.10.0",
+  "firebase/auth": "8.10.0",
+  "firebase/firestore": "8.10.0",
+  "expo-sqlite": "~15.1.4",
+  "expo-constants": "~17.0.8",
+  "expo-status-bar": "~2.0.1",
+  "expo-linear-gradient": "~14.0.2",
+  "@expo/vector-icons": "^14.0.2",
+  "react-native-svg": "15.8.0",
+  "react-native-paper": "4.9.2",
+  "react-native-screens": "~4.4.0",
+  "react-native-calendars": "*",
+  "react-native-chart-kit": "*",
+  "react-native-animatable": "*",
+  "react-native-safe-area-context": "4.12.0",
+  "@react-native-picker/picker": "2.9.0",
+  "@react-navigation/native": "^6.0.9",
+  "@react-navigation/stack": "^6.0.9",
+  "@react-navigation/bottom-tabs": "^6.0.9",
+  "react-native-gesture-handler": "~2.20.2"
+}
+```
+
+📥 **Install all dependencies** with:
+
+```bash
+npx expo install
+```
+
+
 ## 📱 Running the App
 
 Start the development server:
@@ -83,7 +122,6 @@ RWF/
 ├── User Manual
 ├── README.md
 ├── package.json
-
 ```
 
 ---
