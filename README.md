@@ -61,20 +61,30 @@ Then:
 
 ```
 RWF/
+├── App.js
+├── index.js
+├── app.json
 ├── assets/
 ├── components/
-├── screens/
+│   ├── EquipmentScreen.js
+│   ├── HomeScreen.js
 │   ├── LoginScreen.js
+│   ├── ProfilePage.js
+│   ├── ProfileSetupScreen.js
+│   ├── ProgressScreen.js
+│   ├── ScheduleScreen.js
 │   ├── SignupScreen.js
-│   ├── ProfileScreen.js
-│   ├── WorkoutScreen.js
-│   ├── ShopScreen.js
-│   └── ScheduleScreen.js
-├── services/
-│   └── firebase.js 
-├── utils/
-│   └── workoutGenerator.js
-├── App.js
+│   ├── WorkoutDataLogScreen.js
+│   └── WorkoutScreen.js
+├── firebase/
+│   └── firebaseConfig.js
+├── theme.js
+├── Data/
+    └── workoutData.json
+├── User Manual
+├── README.md
+├── package.json
+
 ```
 
 ---
