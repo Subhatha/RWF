@@ -111,7 +111,7 @@ RWF/
 │   ├── ProfilePage.js
 │   ├── ProfileSetupScreen.js
 │   ├── ProgressScreen.js
-│   ├── ScheduleScreen.js
+│   ├── RecentScreen.js
 │   ├── SignupScreen.js
 │   ├── WorkoutDataLogScreen.js
 │   └── WorkoutScreen.js
