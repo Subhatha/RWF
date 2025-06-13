@@ -1,0 +1,197 @@
+[
+  {
+    "Age": "15-19",
+    "Height": "145-165",
+    "Weight": "40-55",
+    "BodyType": "slim",
+    "WorkoutPlan": [
+      { "Exercise": "Jumping Jacks", "Category": "Cardio", "Time": "30s" },
+      { "Exercise": "Push-ups", "Category": "Upper Body", "Reps": "10" },
+      { "Exercise": "Bodyweight Squats", "Category": "Lower Body", "Reps": "15" },
+      { "Exercise": "Plank", "Category": "Core", "Time": "20s" },
+      { "Exercise": "Lunges", "Category": "Lower Body", "Reps": "10" }
+    ]
+  },
+  {
+    "Age": "15-19",
+    "Height": "145-165",
+    "Weight": "40-55",
+    "BodyType": "medium",
+    "WorkoutPlan": [
+      { "Exercise": "High Knees", "Category": "Cardio", "Time": "30s" },
+      { "Exercise": "Push-ups", "Category": "Upper Body", "Reps": "12" },
+      { "Exercise": "Lunges", "Category": "Lower Body", "Reps": "10" },
+      { "Exercise": "Mountain Climbers", "Category": "Core", "Time": "30s" },
+      { "Exercise": "Wall Sit", "Category": "Lower Body", "Time": "20s" }
+    ]
+  },
+  {
+    "Age": "15-19",
+    "Height": "145-165",
+    "Weight": "40-55",
+    "BodyType": "fat",
+    "WorkoutPlan": [
+      { "Exercise": "March in Place", "Category": "Cardio", "Time": "30s" },
+      { "Exercise": "Wall Push-ups", "Category": "Upper Body", "Reps": "8" },
+      { "Exercise": "Step-ups", "Category": "Lower Body", "Reps": "10" },
+      { "Exercise": "Seated Leg Raises", "Category": "Lower Body", "Reps": "10" },
+      { "Exercise": "Arm Circles", "Category": "Upper Body", "Time": "30s" }
+    ]
+  },
+  {
+    "Age": "20-29",
+    "Height": "155-190",
+    "Weight": "50-70",
+    "BodyType": "slim",
+    "WorkoutPlan": [
+      { "Exercise": "Burpees", "Category": "Full Body", "Reps": "10" },
+      { "Exercise": "Chin-ups", "Category": "Upper Body", "Reps": "5" },
+      { "Exercise": "Jump Squats", "Category": "Lower Body", "Reps": "10" },
+      { "Exercise": "Plank", "Category": "Core", "Time": "30s" },
+      { "Exercise": "Mountain Climbers", "Category": "Core", "Time": "30s" }
+    ]
+  },
+  {
+    "Age": "20-29",
+    "Height": "155-190",
+    "Weight": "50-110",
+    "BodyType": "medium",
+    "WorkoutPlan": [
+      { "Exercise": "Mountain Climbers", "Category": "Core", "Time": "30s" },
+      { "Exercise": "Push-ups", "Category": "Upper Body", "Reps": "15" },
+      { "Exercise": "Lunges", "Category": "Lower Body", "Reps": "12" },
+      { "Exercise": "Bodyweight Squats", "Category": "Lower Body", "Reps": "20" },
+      { "Exercise": "Jump Rope", "Category": "Cardio", "Time": "45s" }
+    ]
+  },
+  {
+    "Age": "20-29",
+    "Height": "155-175",
+    "Weight": "80-130",
+    "BodyType": "fat",
+    "WorkoutPlan": [
+      { "Exercise": "Step Touch", "Category": "Cardio", "Time": "30s" },
+      { "Exercise": "Wall Sit", "Category": "Lower Body", "Time": "20s" },
+      { "Exercise": "Knee Push-ups", "Category": "Upper Body", "Reps": "10" },
+      { "Exercise": "Seated Marching", "Category": "Cardio", "Time": "30s" },
+      { "Exercise": "Arm Raises", "Category": "Upper Body", "Reps": "12" }
+    ]
+  },
+  {
+    "Age": "30-39",
+    "Height": "160-180",
+    "Weight": "60-80",
+    "BodyType": "slim",
+    "WorkoutPlan": [
+      { "Exercise": "Plank", "Category": "Core", "Time": "30s" },
+      { "Exercise": "Push-ups", "Category": "Upper Body", "Reps": "20" },
+      { "Exercise": "Bodyweight Squats", "Category": "Lower Body", "Reps": "20" },
+      { "Exercise": "Jumping Lunges", "Category": "Lower Body", "Reps": "15" },
+      { "Exercise": "Burpees", "Category": "Full Body", "Reps": "12" }
+    ]
+  },
+  {
+    "Age": "30-39",
+    "Height": "160-180",
+    "Weight": "60-100",
+    "BodyType": "medium",
+    "WorkoutPlan": [
+      { "Exercise": "Jump Rope", "Category": "Cardio", "Time": "45s" },
+      { "Exercise": "Push-ups", "Category": "Upper Body", "Reps": "18" },
+      { "Exercise": "Lunges", "Category": "Lower Body", "Reps": "15" },
+      { "Exercise": "Plank", "Category": "Core", "Time": "40s" },
+      { "Exercise": "Mountain Climbers", "Category": "Core", "Time": "30s" }
+    ]
+  },
+  {
+    "Age": "30-39",
+    "Height": "160-180",
+    "Weight": "60-120",
+    "BodyType": "fat",
+    "WorkoutPlan": [
+      { "Exercise": "Step Touch", "Category": "Cardio", "Time": "40s" },
+      { "Exercise": "Wall Sit", "Category": "Lower Body", "Time": "30s" },
+      { "Exercise": "Knee Push-ups", "Category": "Upper Body", "Reps": "15" },
+      { "Exercise": "Seated Leg Raises", "Category": "Lower Body", "Reps": "12" },
+      { "Exercise": "Arm Circles", "Category": "Upper Body", "Time": "30s" }
+    ]
+  },
+  {
+    "Age": "40-49",
+    "Height": "160-180",
+    "Weight": "65-85",
+    "BodyType": "slim",
+    "WorkoutPlan": [
+      { "Exercise": "Chair Squats", "Category": "Lower Body", "Reps": "15" },
+      { "Exercise": "Wall Push-ups", "Category": "Upper Body", "Reps": "15" },
+      { "Exercise": "Step Touch", "Category": "Cardio", "Time": "40s" },
+      { "Exercise": "Plank", "Category": "Core", "Time": "30s" },
+      { "Exercise": "Calf Raises", "Category": "Lower Body", "Reps": "20" }
+    ]
+  },
+  {
+    "Age": "40-49",
+    "Height": "160-180",
+    "Weight": "65-95",
+    "BodyType": "medium",
+    "WorkoutPlan": [
+      { "Exercise": "March in Place", "Category": "Cardio", "Time": "45s" },
+      { "Exercise": "Wall Push-ups", "Category": "Upper Body", "Reps": "18" },
+      { "Exercise": "Lunges", "Category": "Lower Body", "Reps": "15" },
+      { "Exercise": "Seated Leg Raises", "Category": "Lower Body", "Reps": "15" },
+      { "Exercise": "Arm Circles", "Category": "Upper Body", "Time": "30s" }
+    ]
+  },
+  {
+    "Age": "40-49",
+    "Height": "160-180",
+    "Weight": "65-125",
+    "BodyType": "fat",
+    "WorkoutPlan": [
+      { "Exercise": "Seated Marching", "Category": "Cardio", "Time": "40s" },
+      { "Exercise": "Wall Sit", "Category": "Lower Body", "Time": "30s" },
+      { "Exercise": "Knee Push-ups", "Category": "Upper Body", "Reps": "12" },
+      { "Exercise": "Seated Leg Raises", "Category": "Lower Body", "Reps": "15" },
+      { "Exercise": "Arm Raises", "Category": "Upper Body", "Reps": "15" }
+    ]
+  },
+  {
+    "Age": "50-60",
+    "Height": "155-175",
+    "Weight": "60-80",
+    "BodyType": "slim",
+    "WorkoutPlan": [
+      { "Exercise": "Chair Squats", "Category": "Lower Body", "Reps": "15" },
+      { "Exercise": "Wall Push-ups", "Category": "Upper Body", "Reps": "12" },
+      { "Exercise": "Step Touch", "Category": "Cardio", "Time": "40s" },
+      { "Exercise": "Plank", "Category": "Core", "Time": "20s" },
+      { "Exercise": "Calf Raises", "Category": "Lower Body", "Reps": "15" }
+    ]
+  },
+  {
+    "Age": "50-60",
+    "Height": "155-175",
+    "Weight": "60-100",
+    "BodyType": "medium",
+    "WorkoutPlan": [
+      { "Exercise": "March in Place", "Category": "Cardio", "Time": "30s" },
+      { "Exercise": "Wall Push-ups", "Category": "Upper Body", "Reps": "15" },
+      { "Exercise": "Lunges", "Category": "Lower Body", "Reps": "12" },
+      { "Exercise": "Seated Leg Raises", "Category": "Lower Body", "Reps": "15" },
+      { "Exercise": "Arm Circles", "Category": "Upper Body", "Time": "30s" }
+    ]
+  },
+  {
+    "Age": "50-60",
+    "Height": "155-175",
+    "Weight": "60-130",
+    "BodyType": "fat",
+    "WorkoutPlan": [
+      { "Exercise": "Seated Marching", "Category": "Cardio", "Time": "30s" },
+      { "Exercise": "Wall Sit", "Category": "Lower Body", "Time": "20s" },
+      { "Exercise": "Knee Push-ups", "Category": "Upper Body", "Reps": "10" },
+      { "Exercise": "Seated Leg Raises", "Category": "Lower Body", "Reps": "10" },
+      { "Exercise": "Arm Raises", "Category": "Upper Body", "Reps": "12" }
+    ]
+  }
+]
