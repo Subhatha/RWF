@@ -47,7 +47,6 @@ function MainTabs() {
             case 'Progress':
               iconName = 'chart-line';
               break;
-            // Changed tab name here:
             case 'Recent':
               iconName = 'calendar-alt';
               break;
