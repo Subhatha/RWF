@@ -13,7 +13,6 @@ import ProfileSetupScreen from './components/ProfileSetupScreen';
 import HomeScreen from './components/HomeScreen';
 import WorkoutScreen from './components/WorkoutScreen';
 import ProgressScreen from './components/ProgressScreen';
-// Changed import here:
 import RecentScreen from './components/RecentScreen';
 import EquipmentScreen from './components/EquipmentScreen';
 import ProfilePage from './components/ProfilePage';
